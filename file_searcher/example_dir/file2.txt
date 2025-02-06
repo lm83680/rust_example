@@ -1,0 +1,7 @@
+For more information about this error, try `rustc --explain E0282`.
+error: could not compile `file_searcher` (bin "file_searcher") due to 2 previous errors
+cent@Mac file_searcher % cargo run -- "hello" ./example_dir hello -r -i
+   Compiling file_searcher v0.1.0 (/Users/cent/project/file_searcher)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.22s
+     Running `target/debug/file_searcher hello ./example_dir -r -i`
+./example_dir/file1.txt: hello world

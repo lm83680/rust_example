@@ -1,0 +1,10 @@
+[package]
+name = "file_searcher"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+regex = "1.11.1"  # 正则表达式支持
+rayon = "1.10.0"  # 并行处理
+clap = { version = "4.5.28", features = ["derive"] }   # 命令行参数解析
+ansi_term = "0.12" # 命令行高亮
