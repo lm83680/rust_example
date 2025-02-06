@@ -5,9 +5,9 @@ use regex::Regex;
 use std::fs;
 use std::path::Path; // 引入并行处理
 
-/// Simple program to greet a person
+/// 关键字搜索🔍
 #[derive(Parser, Debug)]
-#[command(version, about("简单的读取命令行参数程序"), long_about = None)]
+#[command(version, about("关键字搜索🔍"), long_about = None)]
 struct Args {
     /// 要搜索的关键词
     #[arg(index = 1)]
