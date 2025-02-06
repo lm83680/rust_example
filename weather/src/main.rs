@@ -1,6 +1,7 @@
 use clap::Parser;
 use reqwest::Error;
 use serde::Deserialize;
+use serde_json::{from_value, Value};
 use tokio;
 
 #[derive(Parser, Debug)]
@@ -64,8 +65,10 @@ async fn main() -> Result<(), Error> {
         "https://api.openweathermap.org/data/2.5/weather?lat={}&lon={}&appid={}&lang=zh_cn&units=metric",
         lat, lon, api_key
     );
-    let weather_response: WeatherResponse = reqwest::get(&weather_url).await?.json().await?;
-
+    let weather_result: Value = reqwest::get(&weather_url).await?.json().await?;
+     // 从 Value 中解析 WeatherResponse from_value具有拷贝到作用所以他会影响原数据，所以需要使用.clone提供一份新的数据。
+     let weather_response: WeatherResponse = from_value(weather_result.clone()).expect("Failed to parse WeatherResponse");
+     
     // 输出天气信息
     println!("搜索地：{}", city);
     println!("位置坐标：{},{}", lat, lon);
@@ -74,6 +77,11 @@ async fn main() -> Result<(), Error> {
     println!("湿度：{}%", weather_response.main.humidity);
     println!("风速：{} m/s", weather_response.wind.speed);
 
+    // 格式化并打印天气信息
+    let pretty_weather = serde_json::to_string_pretty(&weather_result).unwrap();
+
+    println!("元数据");
+    println!("{}", pretty_weather);
     Ok(())
 }
 
