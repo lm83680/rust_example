@@ -1,0 +1,19 @@
+[package]
+name = "smart_money"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+actix-web = "4.9.0"
+serde = "1.0.217"
+anyhow = "1.0"
+futures = "0.3"
+sqlx = { version = "0.8", features = [ "sqlite", "runtime-tokio", "tls-native-tls" ] }
+tokio = { version = "1.43.0", features = ["rt", "macros"]}
+chrono = "0.4.39"
+serde_json = "1.0.138"
+rust-i18n = "3.1.2"
+
+log = "0.4"          # 日志门面
+fern = "0.7.1"         # 日志分发和格式化
+log4rs = "1.2"       # 日志配置和滚动策略

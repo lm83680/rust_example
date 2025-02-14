@@ -1,0 +1,19 @@
+2025-02-14T18:04:46.075889+08:00 INFO actix_server::builder - starting 10 workers
+2025-02-14T18:04:46.076581+08:00 INFO actix_server::server - Actix runtime found; starting in Actix runtime
+2025-02-14T18:04:46.076627+08:00 INFO actix_server::server - starting service: "actix-web-service-127.0.0.1:8080", workers: 10, listening on: 127.0.0.1:8080
+2025-02-14T18:05:15.181420+08:00 INFO smart_money::api::v1::users - Application started
+2025-02-14T18:05:15.181830+08:00 WARN smart_money::api::v1::users - This is a warning message
+2025-02-14T18:05:15.181844+08:00 ERROR smart_money::api::v1::users - This is an error message
+2025-02-14T18:05:15.182013+08:00 INFO actix_web::middleware::logger - 127.0.0.1 "GET /api/v1/users/userInfo/19 HTTP/1.1" 200 139 "-" "" 0.000823
+2025-02-14T18:06:11.370994+08:00 INFO actix_server::server - SIGINT received; starting forced shutdown
+2025-02-14T18:06:11.371274+08:00 INFO actix_server::accept - accept thread stopped
+2025-02-14T18:06:11.371678+08:00 INFO actix_server::worker - shutting down idle worker
+2025-02-14T18:06:11.371893+08:00 INFO actix_server::worker - shutting down idle worker
+2025-02-14T18:06:11.371945+08:00 INFO actix_server::worker - shutting down idle worker
+2025-02-14T18:06:11.372129+08:00 INFO actix_server::worker - shutting down idle worker
+2025-02-14T18:06:11.372312+08:00 INFO actix_server::worker - shutting down idle worker
+2025-02-14T18:06:11.372437+08:00 INFO actix_server::worker - shutting down idle worker
+2025-02-14T18:06:11.372569+08:00 INFO actix_server::worker - shutting down idle worker
+2025-02-14T18:06:11.372685+08:00 INFO actix_server::worker - shutting down idle worker
+2025-02-14T18:06:11.372811+08:00 INFO actix_server::worker - shutting down idle worker
+2025-02-14T18:06:11.372926+08:00 INFO actix_server::worker - shutting down idle worker

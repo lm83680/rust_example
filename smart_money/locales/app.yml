@@ -1,0 +1,4 @@
+_version: 2
+InvalidEmailFormat:
+  en: Invalid Email Format
+  zh-CN: 邮件格式无效
